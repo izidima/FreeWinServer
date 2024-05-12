@@ -29,17 +29,17 @@ jobs:
     - name: Auth
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
-        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        NGROK_AUTH_TOKEN: ${{ 4cLkCHxaJ2hNATbr6XH4w_yk7NUbHbKrp9SXuEwKmw }}
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
     - run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
-    - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
+    - run: Set-LocalUser -Name "izidima" -Password (ConvertTo-SecureString -AsPlainText "Gh0stm4n82" -Force)
     - name: Create Tunnel
       run: .\ngrok\ngrok.exe tcp 3389
 
 ```
-* Run The WorkFlow and take note of credentials (runneradmin:P@ssw0rd!)
+* Run The WorkFlow and take note of credentials (izidima)(Gh0stm4n92)
 * Get the ngrok endpoint url and use it as ip or address in Remote Desktop Connection with credentials
 
 ## Thanks!
